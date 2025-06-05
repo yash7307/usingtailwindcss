@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University website design</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'serif': ['Georgia', 'serif']
+                    },
+                    colors: {
+                        'primary': '#f44336',
+                        'dark-overlay': 'rgba(4,9,30,0.7)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .bg-hero {
+            background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-position: center;
+            background-size: cover;
+        }
+        .bg-cta {
+            background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-position: center;
+            background-size: cover;
+        }
+        .nav-underline {
+            position: relative;
+        }
+        .nav-underline::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #f44336;
+            transition: width 0.5s ease;
+        }
+        .nav-underline:hover::after {
+            width: 100%;
+        }
+        .campus-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            transition: background 0.3s ease;
+        }
+        .campus-overlay:hover {
+            background: rgba(226,0,0,0.7);
+        }
+    </style>
+</head>
+<body class="font-serif m-0 p-0">
+    <!-- Header Section -->
+    <section class="bg-hero min-h-screen w-full relative">
+        <!-- Navigation -->
+        <nav class="flex justify-between items-center px-6 py-4 md:px-12 md:py-8">
+            <a href="index.html" class="flex items-center">
+                <img src="https://via.placeholder.com/150x60/ffffff/000000?text=LOGO" alt="Logo" class="w-32 md:w-40">
+            </a>
+            
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex">
+                <ul class="flex space-x-8">
+                    <li><a href="#" class="text-white text-sm nav-underline pb-2 hover:text-primary transition-colors">HOME</a></li>
+                    <li><a href="#" class="text-white text-sm nav-underline pb-2 hover:text-primary transition-colors">ABOUT</a></li>
+                    <li><a href="#" class="text-white text-sm nav-underline pb-2 hover:text-primary transition-colors">COURSE</a></li>
+                    <li><a href="#" class="text-white text-sm nav-underline pb-2 hover:text-primary transition-colors">BLOG</a></li>
+                    <li><a href="#" class="text-white text-sm nav-underline pb-2 hover:text-primary transition-colors">CONTACT</a></li>
+                </ul>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white text-xl" onclick="toggleMenu()">
+                <i class="fa fa-bars"></i>
+            </button>
+            
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="fixed top-0 right-0 h-full w-48 bg-primary transform translate-x-full transition-transform duration-300 z-50 md:hidden">
+                <button class="text-white text-xl p-4" onclick="toggleMenu()">
+                    <i class="fa fa-times"></i>
+                </button>
+                <ul class="pt-8 px-6 space-y-4">
+                    <li><a href="#" class="block text-white text-sm py-2">HOME</a></li>
+                    <li><a href="#" class="block text-white text-sm py-2">ABOUT</a></li>
+                    <li><a href="#" class="block text-white text-sm py-2">COURSE</a></li>
+                    <li><a href="#" class="block text-white text-sm py-2">BLOG</a></li>
+                    <li><a href="#" class="block text-white text-sm py-2">CONTACT</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Hero Content -->
+        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white w-full px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Worlds Biggest University</h1>
+            <p class="text-sm mb-10 max-w-2xl mx-auto leading-relaxed">
+                Making website is now one of the easiest thing in the world.<br> 
+                you just need to learn HTML, CSS, Javascript and you are good to go.
+            </p>
+            <a href="#" class="inline-block border border-white text-white px-8 py-3 text-sm bg-transparent hover:bg-primary hover:border-primary transition-all duration-500 cursor-pointer">
+                Visit Us to know more
+            </a>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section class="w-4/5 mx-auto text-center pt-24 pb-12">
+        <h1 class="text-3xl font-bold mb-4">Courses We offer</h1>
+        <p class="text-gray-600 text-sm font-light leading-relaxed px-2 mb-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        
+        <div class="flex flex-col md:flex-row justify-between gap-8 mt-12">
+            <div class="flex-1 bg-red-50 rounded-lg mb-8 p-6 transition-all duration-500 hover:shadow-xl">
+                <h3 class="text-xl font-semibold my-4 text-center">Intermediate</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">CSS (Cascading Style Sheets) is used to style HTML elements and control their appearance on a webpage. It includes various properties like colors, fonts, layouts, and animations</p>
+            </div>
+            <div class="flex-1 bg-red-50 rounded-lg mb-8 p-6 transition-all duration-500 hover:shadow-xl">
+                <h3 class="text-xl font-semibold my-4 text-center">Degree</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">CSS (Cascading Style Sheets) is used to style HTML elements and control their appearance on a webpage. It includes various properties like colors, fonts, layouts, and animations</p>
+            </div>
+            <div class="flex-1 bg-red-50 rounded-lg mb-8 p-6 transition-all duration-500 hover:shadow-xl">
+                <h3 class="text-xl font-semibold my-4 text-center">Post Graduation</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">CSS (Cascading Style Sheets) is used to style HTML elements and control their appearance on a webpage. It includes various properties like colors, fonts, layouts, and animations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Campus Section -->
+    <section class="w-4/5 mx-auto text-center py-12">
+        <h1 class="text-3xl font-bold mb-4">Our Global Campus</h1>
+        <p class="text-gray-600 text-sm font-light leading-relaxed px-2 mb-12">Our campus are present at the different places of the world</p>
+        
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+            <div class="flex-1 rounded-3xl mb-10 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="London" class="w-full h-64 object-cover">
+                <div class="campus-overlay flex items-center justify-center">
+                    <h3 class="text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">London</h3>
+                </div>
+            </div>
+            <div class="flex-1 rounded-3xl mb-10 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="New York" class="w-full h-64 object-cover">
+                <div class="campus-overlay flex items-center justify-center">
+                    <h3 class="text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">New York</h3>
+                </div>
+            </div>
+            <div class="flex-1 rounded-3xl mb-10 relative overflow-hidden">
+                <img src="https://images.unsplash.com/photo-1617581629397-a72507c3de9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Washington" class="w-full h-64 object-cover">
+                <div class="campus-overlay flex items-center justify-center">
+                    <h3 class="text-white text-2xl font-bold opacity-0 hover:opacity-100 transition-opacity duration-300">Washington</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="w-4/5 mx-auto text-center py-24">
+        <h1 class="text-3xl font-bold mb-4">Our facilities</h1>
+        <p class="text-gray-600 text-sm font-light leading-relaxed px-2 mb-12">We provide different types of research based facilities</p>
+        
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+            <div class="flex-1 rounded-lg mb-8 text-left">
+                <img src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Library" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mt-4 mb-4">World Class Library</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Here we provide a wide range of books on every possible topic.</p>
+            </div>
+            <div class="flex-1 rounded-lg mb-8 text-left">
+                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Basketball" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mt-4 mb-4">Largest Playground</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Here we provide a wide range of sports facilities for all students.</p>
+            </div>
+            <div class="flex-1 rounded-lg mb-8 text-left">
+                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cafeteria" class="w-full rounded-lg mb-4">
+                <h3 class="text-xl font-semibold mt-4 mb-4">Tasty and Healthy</h3>
+                <p class="text-gray-600 text-sm leading-relaxed">Our cafeteria offers a variety of tasty and healthy food options.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="w-4/5 mx-auto text-center pt-24 pb-12">
+        <h1 class="text-3xl font-bold mb-4">What our Students Say</h1>
+        <p class="text-gray-600 text-sm font-light leading-relaxed px-2 mb-12">Students are very happy by research and development culture</p>
+        
+        <div class="flex flex-col md:flex-row justify-between gap-8">
+            <div class="flex-1 bg-red-50 rounded-lg p-6 cursor-pointer mb-8 flex flex-col md:flex-row items-start">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="David" class="w-10 h-10 rounded-full mb-4 md:mb-0 md:mr-6 flex-shrink-0">
+                <div class="text-left">
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        "The university provides excellent research opportunities and a supportive environment. The faculty is knowledgeable and always ready to help. I have grown both academically and personally during my time here."
+                    </p>
+                    <h3 class="text-lg font-semibold mb-2">David</h3>
+                    <div class="text-primary">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flex-1 bg-red-50 rounded-lg p-6 cursor-pointer mb-8 flex flex-col md:flex-row items-start">
+                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80" alt="Lara" class="w-10 h-10 rounded-full mb-4 md:mb-0 md:mr-6 flex-shrink-0">
+                <div class="text-left">
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                        "The university provides excellent research opportunities and a supportive environment. The faculty is knowledgeable and always ready to help. I have grown both academically and personally during my time here."
+                    </p>
+                    <h3 class="text-lg font-semibold mb-2">Lara</h3>
+                    <div class="text-primary">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="bg-cta my-24 mx-auto w-4/5 text-center py-24 px-4">
+        <h1 class="text-white text-2xl md:text-3xl font-bold mb-10">Enrol for our various online courses anywhere from the world</h1>
+        <a href="#" class="inline-block border border-white text-white px-8 py-3 text-sm bg-transparent hover:bg-primary hover:border-primary transition-all duration-500 cursor-pointer">
+            Contact us
+        </a>
+    </section>
+
+    <!-- Footer Section -->
+    <section class="w-full text-center py-8 bg-gray-50">
+        <h4 class="text-lg font-semibold mb-6 mt-5">About US</h4>
+        <p class="text-gray-600 text-sm leading-relaxed max-w-4xl mx-auto px-4 mb-6">
+            Our university is dedicated to providing world-class education and fostering a culture of innovation and research.<br> 
+            With a diverse community of students and faculty, we strive to create an environment where everyone can learn, grow, and achieve their goals. 
+            Our commitment to excellence ensures that our graduates are well-prepared to make a positive impact in the world.
+        </p>
+        <div class="flex justify-center space-x-6">
+            <i class="fab fa-twitter text-primary text-lg cursor-pointer hover:scale-110 transition-transform"></i>
+            <i class="fab fa-facebook-f text-primary text-lg cursor-pointer hover:scale-110 transition-transform"></i>
+            <i class="fab fa-instagram text-primary text-lg cursor-pointer hover:scale-110 transition-transform"></i>
+            <i class="fab fa-linkedin-in text-primary text-lg cursor-pointer hover:scale-110 transition-transform"></i>
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('translate-x-full');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menu = document.getElementById('mobileMenu');
+            const menuButton = event.target.closest('.fa-bars');
+            
+            if (!menu.contains(event.target) && !menuButton) {
+                menu.classList.add('translate-x-full');
+            }
+        });
+    </script>
+</body>
+</html>

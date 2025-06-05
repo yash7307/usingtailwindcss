@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University website design</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="m-0 p-0 font-serif">
+    <section class=" bg-[linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('banner.png')] min-h-100vh w-[100%] bg-center bg-cover position-relative
+">
+        
+        <nav class="flex items-center justify-between py-[2%] px-[6%]" >
+            <a href="index.html" class="flex items-center justify-between py-[2%] px-[6%]"><img  src="logo.png" alt="Logo" class="w-[150px]"></a>
+            <div class="flex-[1] text-right" style="right: -200px;">
+                <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
+
+                <ul >
+                    <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">HOME</a></li>
+                    <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">ABOUT</a></li>
+                    <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">COURSE</a></li>
+                    <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">BLOG</a></li>
+                    <li class="font-[13px]text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
+        </nav>
+        <div class="w-[90%] text-white position-absolute top-[50%] left-[50%] text-center">
+        <h1 class="font-[62px] ">Worlds Biggest University</h1>
+        <p class="font[14px] mt-[10px] mr-[0px] mb-[40px]">
+            Making website is now one of the easiest thing in the world.<br> you just need to learn HTML,CSS,Javascript and you are good to go.
+        </p>
+        <a href="" class="py-[12px] px-[34px] font-[13px] text-white inline-block position-relative bg-transparent cursor-pointer border-[1px] border-solid border-white hover:border-[#f44336] hover:bg-[#f44336]">Visit Us to know more</a>
+        </div>   
+    </section>
+    <section class="w-[80%] m-auto text-center pt-[100px]">
+        <h1>Courses We offer</h1>
+        <p class="text-gray-600 text-[14px] font-[300] leading-[22px] p-[10px] ">Lorem isum dolor sit amet,consectetur adipiscing elit</p>
+        <div class="m-[5%] flex justify-between">
+            <div class="basis-[31%] bg-white rounded-[10px] mb-[5%] py-[20px] px-[12px]
+            duration-0.5 ease-in-out box-border hover:shadow-[0_0_20px_0_rgba(0,0,0,0.2)]">
+                <h3 class="my-[10px] mx-[0px] text-center font-[600]">Intermediate</h3>
+                <p>CSS (Cascading Style Sheets) is used to style HTML elements and control their appearance on a webpage. It includes various properties like colors, fonts, layouts, and animations</p>
+            </div>
+            <div class="basis-[31%] bg-white rounded-[10px] mb-[5%] py-[20px] px-[12px]
+            duration-0.5 ease-in-out box-border hover:shadow-[0_0_20px_0_rgba(0,0,0,0.2)]">
+                <h3 class="my-[10px] mx-[0px] text-center font-[600]">Degree</h3>
+                <p>CSS (Cascading Style Sheets) is used to style HTML elements and control their appearance on a webpage. It includes various properties like colors, fonts, layouts, and animations</p>
+            </div>
+            <div class="basis-[31%] bg-white rounded-[10px] mb-[5%] py-[20px] px-[12px]
+            duration-0.5 ease-in-out box-border hover:shadow-[0_0_20px_0_rgba(0,0,0,0.2)]">
+                <h3 class="my-[10px] mx-[0px] text-center font-[600]">Post Graduation</h3>
+                <p>CSS (Cascading Style Sheets) is used to style HTML elements and control their appearance on a webpage. It includes various properties like colors, fonts, layouts, and animations</p>
+            </div>
+        </div>    </section>
+    <section class="w-[80%] p-[50px] text-center m-auto">
+        <h1>Our Global Campus</h1>
+        <p>Our campus are present at the different places of the world</p>
+        <div class="m-[5%] flex justify-between">
+            <div class="basis-[32%] overflow-hidden realtive mb-[40px] rounded-[20px]  ">
+                <img  src="london.png" class="w-full">
+                <div class="layer">
+                    <h3>London</h3>
+                </div>
+            </div>
+            <div class="basis-[32%] overflow-hidden realtive mb-[40px] rounded-[20px] ">
+                <img src="newyork.png" class="w-full">
+                <div class="layer ">
+                    <h3>Newyork</h3>
+                </div>
+            </div>
+            <div class="basis-[32%] overflow-hidden realtive mb-[40px] rounded-[20px] ">
+                <img src="washington.png" class="w-full">
+                <div class=" layer">
+                    <h3>Washington</h3>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <section class="w-[80%] m-auto text-center p-[100px]">
+        <h1>Our facilities</h1>
+        <p>We provide different types of research based facilities</p>
+        <div class="m-[5%] flex justify-between">
+            <div class="basis-[32%] rounded-[10%] mb-[5%]" >
+                <img src="library.png" class="w-full rounded-[10px]">
+                <h3 class="mt-[15px] mb-[16px] text-left">World Class Library</h3>
+                <p class="p-[0px]">Here we provide a wide range of books on every possible topic.</p>
+
+            </div>
+            <div class="basis-[32%] rounded-[10%] mb-[5%] text-left">
+                <img src="basketball.png" class="w-full rounded-[10px]">
+                <h3 class="mt-[15px] mb-[16px] text-left">Largest Playground</h3>
+                <p class="p-[0px]">Here we provide a wide range of sports facilities for all students.</p>
+
+            </div>
+            <div class="basis-[32%] rounded-[10%] mb-[5%]">
+                <img src="cafeteria.png" class="w-full rounded-[10px]">
+                <h3 class="mt-[15px] mb-[16px] text-left">Tasty and Healthy</h3>
+                <p class="p-[0px]">Our cafeteria offers a variety of tasty and healthy food options.</p>
+
+            </div>
+        </div>
+
+    </section>
+    <section class="w-[80%] m-auto text-center pt-[100px]">
+        <h1>What our Students Say</h1>
+        <p>Students are very happy by research and development culture</p>
+        <div class="m-[5%] flex justify-between">
+            <div class="rounded-[10px] text-left basis-[44%] mb-[5%] bg-white p-[25px] cursor-pointer flex  ">
+            <img src="user1.jpg " class="h-[40px] mr-[30px] ml-[5px] rounded--[50%] ">
+            <p class="p-[0px]">
+                "The university provides excellent research opportunities and a supportive environment. The faculty is knowledgeable and always ready to help. I have grown both academically and personally during my time here."
+            </p><br>
+            <h3 class="mt-[15px] text-left">David</h3>
+            <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
+            </div>
+            <div class="rounded-[10px] text-left basis-[44%] mb-[5%] bg-white p-[25px] cursor-pointer flex">
+            <img src="user2.jpg" class="h-[40px] mr-[30px] ml-[5px] rounded--[50%] ">
+            <p class="p-[0px]">
+                "The university provides excellent research opportunities and a supportive environment. The faculty is knowledgeable and always ready to help. I have grown both academically and personally during my time here."
+            </p><br>
+            <h3 class="mt-[15px] text-left">Lara</h3>
+            <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i>
+            
+            </div>
+        </div>
+    </section>
+    <section class="my-[100px] mx-auto w-[80%] text-center  bg-[linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url('banner.png')] bg-center bg-cover py-[100px] px-[0px] text-center" 
+    >
+        <h1 class="mb-[40px] p-[0px] text-white">Enrol for our various online couses anywhere from the world</h1>
+        <a  class="py-[12px] px-[34px] font-[13px] text-white inline-block position-relative bg-transparent cursor-pointer border-[1px] border-solid border-white hover:border-[#f44336] hover:bg-[#f44336]">Contact us</a>
+    
+    </section>
+    <section class="w-[100%] text-center py-[30px] px-[0px]">
+        <h4 class="mt-[20px] mb-[25px] font-[600]">About US</h4>
+        <p>Our university is dedicated to providing world-class education and fostering a culture of innovation and research.<br> With a diverse community of students and faculty, we strive to create an environment where everyone can learn, grow, and achieve their goals. Our commitment to excellence ensures that our graduates are well-prepared to make a positive impact in the world.</p>
+        <div class="icons">
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-linkedin-in"></i>
+        </div>
+    </section>
+    <script>
+        function showMenu() {
+            document.querySelector('.nav-links').style.right = "0";
+        }
+        function hideMenu() {
+            document.querySelector('.nav-links').style.right = "-200px";
+        }
+    </script>
+
+</body></html>
