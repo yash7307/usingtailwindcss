@@ -13,21 +13,21 @@
         
         <nav class="flex items-center justify-between py-[2%] px-[6%]" >
             <a href="index.html" class="flex items-center justify-between py-[2%] px-[6%]"><img  src="logo.png" alt="Logo" class="w-[150px]"></a>
-            <div class="flex-[1] text-right" style="right: -200px;">
+            <div class="flex-[1] text-right max-[700px]:absolute max-[700px]:bg-red-500 max-[700px]:h-screen max-[700px]:w-[200px] max-[700px]:top-0 max-[700px]:-right-[200px] max-[700px]:text-left max-[700px]:z-[2] max-[700px]:transition-all max-[700px]:duration-1000" ">
                 <i class="fa fa-times" aria-hidden="true" onclick="hideMenu()"></i>
 
-                <ul >
+                <ul class="max-[700px]:p-[30px]">
                     <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">HOME</a></li>
                     <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">ABOUT</a></li>
                     <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">COURSE</a></li>
                     <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">BLOG</a></li>
-                    <li class="font-[13px]text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">CONTACT</a></li>
+                    <li class="font-[13px] text-white inline-block position-relative py-[8px] px-[12px]"><a class="font-[13px] text-white" href="">CONTACT</a></li>
                 </ul>
             </div>
             <i class="fa fa-bars" aria-hidden="true" onclick="showMenu()"></i>
         </nav>
         <div class="w-[90%] text-white position-absolute top-[50%] left-[50%] text-center">
-        <h1 class="font-[62px] ">Worlds Biggest University</h1>
+        <h1 class="font-[62px] max-[700px]:text-[20px]">Worlds Biggest University</h1>
         <p class="font[14px] mt-[10px] mr-[0px] mb-[40px]">
             Making website is now one of the easiest thing in the world.<br> you just need to learn HTML,CSS,Javascript and you are good to go.
         </p>
@@ -37,7 +37,7 @@
     <section class="w-[80%] m-auto text-center pt-[100px]">
         <h1>Courses We offer</h1>
         <p class="text-gray-600 text-[14px] font-[300] leading-[22px] p-[10px] ">Lorem isum dolor sit amet,consectetur adipiscing elit</p>
-        <div class="m-[5%] flex justify-between">
+        <div class="m-[5%] flex justify-between max-[700px]:flex-col">
             <div class="basis-[31%] bg-white rounded-[10px] mb-[5%] py-[20px] px-[12px]
             duration-0.5 ease-in-out box-border hover:shadow-[0_0_20px_0_rgba(0,0,0,0.2)]">
                 <h3 class="my-[10px] mx-[0px] text-center font-[600]">Intermediate</h3>
@@ -57,14 +57,14 @@
     <section class="w-[80%] p-[50px] text-center m-auto">
         <h1>Our Global Campus</h1>
         <p>Our campus are present at the different places of the world</p>
-        <div class="m-[5%] flex justify-between">
-            <div class="basis-[32%] overflow-hidden realtive mb-[40px] rounded-[20px]  ">
+        <div class="m-[5%] flex justify-between max-[700px]:flex-col">
+            <div class="basis-[32%] overflow-hidden relative mb-[40px] rounded-[20px]  ">
                 <img  src="london.png" class="w-full">
                 <div class="layer">
                     <h3>London</h3>
                 </div>
             </div>
-            <div class="basis-[32%] overflow-hidden realtive mb-[40px] rounded-[20px] ">
+            <div class="basis-[32%] overflow-hidden relative mb-[40px] rounded-[20px] ">
                 <img src="newyork.png" class="w-full">
                 <div class="layer ">
                     <h3>Newyork</h3>
@@ -81,7 +81,7 @@
     <section class="w-[80%] m-auto text-center p-[100px]">
         <h1>Our facilities</h1>
         <p>We provide different types of research based facilities</p>
-        <div class="m-[5%] flex justify-between">
+        <div class="m-[5%] flex justify-between max-[700px]:flex-col">
             <div class="basis-[32%] rounded-[10%] mb-[5%]" >
                 <img src="library.png" class="w-full rounded-[10px]">
                 <h3 class="mt-[15px] mb-[16px] text-left">World Class Library</h3>
@@ -106,9 +106,9 @@
     <section class="w-[80%] m-auto text-center pt-[100px]">
         <h1>What our Students Say</h1>
         <p>Students are very happy by research and development culture</p>
-        <div class="m-[5%] flex justify-between">
+        <div class="m-[5%] flex justify-between max-[700px]:flex-col">
             <div class="rounded-[10px] text-left basis-[44%] mb-[5%] bg-white p-[25px] cursor-pointer flex  ">
-            <img src="user1.jpg " class="h-[40px] mr-[30px] ml-[5px] rounded--[50%] ">
+            <img src="user1.jpg" class="h-[40px] mr-[30px] ml-[5px] rounded-[50%] ">
             <p class="p-[0px]">
                 "The university provides excellent research opportunities and a supportive environment. The faculty is knowledgeable and always ready to help. I have grown both academically and personally during my time here."
             </p><br>
@@ -116,7 +116,7 @@
             <i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-o" aria-hidden="true"></i>
             </div>
             <div class="rounded-[10px] text-left basis-[44%] mb-[5%] bg-white p-[25px] cursor-pointer flex">
-            <img src="user2.jpg" class="h-[40px] mr-[30px] ml-[5px] rounded--[50%] ">
+            <img src="user2.jpg" class="h-[40px] mr-[30px] ml-[5px] rounded-[50%] ">
             <p class="p-[0px]">
                 "The university provides excellent research opportunities and a supportive environment. The faculty is knowledgeable and always ready to help. I have grown both academically and personally during my time here."
             </p><br>
